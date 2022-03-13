@@ -14,11 +14,12 @@
 
 ## GraphQL
     - Open ABInBev postam collection for more information
-    - Variables
-    | Name | Type |
-    | :-------------| -------------:|
-    |  q            | String        |
-    |  latitude     | Float         |
-    |  longitude    | Float         |
-    |  page         | Int           |
-    |  row          | Int           |
+## Variables
+
+| Name | Type |
+| :-------------| -------------:|
+|  q            | String        |
+|  latitude     | Float         |
+|  longitude    | Float         |
+|  page         | Int           |
+|  row          | Int           |
