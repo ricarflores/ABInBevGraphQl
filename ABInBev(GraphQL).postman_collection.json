@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "da564b36-c07d-4974-9156-d14d68efc17d",
+		"name": "ABInBev(GraphQL)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GraphQL Test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getSearch($q: String!, $latitude: Float!, $longitude: Float!, $page: Int!, $rows:Int!) {\r\n  search(q: $q, latitude: $latitude, longitude: $longitude, page:$page, rows:$rows) {\r\n    q\r\n    latitude\r\n    longitude,\r\n    search {\r\n      suscess\r\n      error,\r\n      search {\r\n        longitude\r\n        name\r\n        latitude\r\n        country_code\r\n        score\r\n      },\r\n      pagination {\r\n        start\r\n        end\r\n        hasNextPage\r\n        hasPreviousPage\r\n        nextPage\r\n        previousPage\r\n        lastPage\r\n        itemsPerPage\r\n        totalDocuments\r\n        currentPage\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+						"variables": "{\r\n  \"q\": \"london\",\r\n  \"latitude\": 43.70011,\r\n  \"longitude\": -79.4163,\r\n  \"page\": 1,\r\n  \"rows\": 10\r\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
