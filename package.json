@@ -4,6 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon ./app/server.js",
+    "serve" : "pm2 start ecosystem.config.js",
     "test": "jest --forceExit --runInBand --verbose --ci --testResultsProcessor=\"jest-junit\" -- ./app/test.js"
   },
   "author": "Ricardo Flores Ramos",
